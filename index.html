@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porsche GT3 RS — Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="wordmark">PORSCHE</div>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#video">Video</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="img/kling_20260718_IMAGE_Porsche_91_857_1.png" alt="Porsche GT3 RS side profile" />
+    <div class="hero-text">
+      <span class="label">911 GT3 RS</span>
+      <h1>Pure.<br>Uncompromised.<br>Porsche.</h1>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="grid">
+      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_Porsche_91_857_1.png')">
+        <img src="img/kling_20260718_IMAGE_Porsche_91_857_1.png" alt="GT3 RS Profile" loading="lazy" />
+        <p>GT3 RS — Side Profile</p>
+      </div>
+      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_Porsche_91_857_1 (1).png')">
+        <img src="img/kling_20260718_IMAGE_Porsche_91_857_1 (1).png" alt="GT3 RS Alt" loading="lazy" />
+        <p>GT3 RS — Studio</p>
+      </div>
+      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_can_you_sh_883_0.png')">
+        <img src="img/kling_20260718_IMAGE_can_you_sh_883_0.png" alt="Porsche detail" loading="lazy" />
+        <p>Detail Shot</p>
+      </div>
+      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_can_you_sh_885_0.png')">
+        <img src="img/kling_20260718_IMAGE_can_you_sh_885_0.png" alt="Porsche detail 2" loading="lazy" />
+        <p>Detail Shot II</p>
+      </div>
+      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_i_need_a_s_870_0.png')">
+        <img src="img/kling_20260718_IMAGE_i_need_a_s_870_0.png" alt="Porsche studio" loading="lazy" />
+        <p>Studio Render</p>
+      </div>
+      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_show_me_a__869_0.png')">
+        <img src="img/kling_20260718_IMAGE_show_me_a__869_0.png" alt="Porsche showcase" loading="lazy" />
+        <p>Showcase</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="video">
+    <h2 class="section-title">In Motion</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata" poster="img/kling_20260718_IMAGE_Porsche_91_857_1.png">
+          <source src="vid/kling_20260718_VIDEO_I_want_the_926_0.mp4" type="video/mp4" />
+        </video>
+        <p>GT3 RS — Motion I</p>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="img/kling_20260718_IMAGE_Porsche_91_857_1.png">
+          <source src="vid/kling_20260718_VIDEO__898_0.mp4" type="video/mp4" />
+        </video>
+        <p>GT3 RS — Motion II</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 — Porsche GT3 RS Gallery</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <button class="close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
