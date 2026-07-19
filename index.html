@@ -3,83 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Porsche GT3 RS — Gallery</title>
+  <title>Porsche GT3 RS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
+  <!-- GRID OVERLAY -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- NAV PILL -->
   <header>
-    <div class="wordmark">PORSCHE</div>
-    <nav>
-      <a href="#gallery">Gallery</a>
-      <a href="#video">Video</a>
-    </nav>
+    <div class="nav-pill">
+      <div class="nav-bar">
+        <div class="nav-hamburger">
+          <span></span>
+          <span></span>
+        </div>
+        <span class="nav-model">
+          <svg viewBox="0 0 777 55" fill="none" xmlns="http://www.w3.org/2000/svg" class="porsche-logo">
+            <path d="M551.637 10.8408H470.431C468.526 10.8411 467.837 12.6713 467.837 14.2773V40.6113C467.837 42.2171 468.833 43.2791 470.431 43.2793H551.637V54.1162H470.431C461.578 54.116 455.557 48.0105 455.557 39.0791V15.8828C455.557 5.65682 459.902 0.00794347 470.431 0.0078125L551.637 0.00390625V10.8408ZM88.6094 0.00390625C97.0802 0.00390625 100.745 8.09338 100.745 15.5723V21.8311C100.745 31.2936 95.0963 38.166 85.252 38.166H12.3682V54.1123H0V0.00390625H88.6094ZM200.037 0C208.354 0 214.385 5.11342 214.385 13.6631V40.4531C214.385 49.0069 208.354 54.1123 200.037 54.1123H127.76C119.443 54.1123 113.412 49.0069 113.412 40.4531V13.6631C113.412 5.11342 119.443 0 127.76 0H200.037ZM316.728 0.00390625C323.061 0.00390625 328.863 4.2003 328.863 10.8408V24.8857C328.863 30.7623 324.282 33.8877 319.094 35.2656C326.572 38.7769 328.1 46.5588 328.863 54.1123H316.728C316.192 45.9487 312.681 38.1662 303.298 38.166H240.104V54.1123H227.741V0.00390625H316.728ZM440.818 10.8408H358.551C355.268 10.8408 353.895 13.2066 353.895 16.3359C353.895 19.3116 355.422 21.6025 358.551 21.6025H425.637C436.627 21.6026 442.578 26.8696 442.578 38.0879C442.578 47.4757 437.544 54.1122 427.778 54.1123H343.443V43.2754H425.641C428.463 43.2754 429.688 40.8347 429.688 38.3154C429.687 35.4228 429.081 32.3643 425.641 32.3643H355.957C346.951 32.3643 341.763 25.4203 341.763 16.7959C341.763 6.03444 347.561 0.00786826 358.555 0.0078125L440.818 0.00390625V10.8408ZM577.355 21.0674H649.177V0.00390625H661.919V54.1123H649.177V31.9033H577.355V54.1123H564.913V0.00390625H577.355V21.0674ZM776.476 10.8408H687.331V21.2998H776.476V32.0566H687.331V43.2754H776.476V54.1123H674.972V0.00390625H776.476V10.8408ZM132.952 10.8408C129.059 10.8408 125.93 12.5216 125.93 16.8711V37.2451C125.93 41.5985 129.134 43.2754 132.952 43.2754H195.688C199.502 43.2754 202.632 41.5984 202.632 37.2451V16.8711C202.632 12.5216 199.581 10.8409 195.688 10.8408H132.952ZM13 27.4854H83.5186C86.573 27.4852 89.2412 26.2645 89.2412 22.8281V16.7275C89.2412 13.1418 87.1042 11.0041 83.5186 11.0039L13 11V27.4854ZM240.105 10.8408V27.3252H313.679C316.119 27.3249 316.729 25.2625 316.729 23.2041V15.875C316.729 12.3638 315.434 10.8369 311.844 10.8369L240.105 10.8408Z" fill="white"/>
+          </svg>
+        </span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-item">
+          <div class="nav-menu-img"><img src="img/kling_20260718_IMAGE_i_need_a_s_870_0.png" alt="Coupé" /></div>
+          <div class="nav-menu-label"><span>Coupé</span><span class="nav-menu-view">View</span></div>
+        </div>
+        <div class="nav-menu-item">
+          <div class="nav-menu-img"><img src="img/kling_20260718_IMAGE_Porsche_91_857_1.png" alt="Turbo Coupé" /></div>
+          <div class="nav-menu-label"><span>Turbo Coupé</span><span class="nav-menu-view">View</span></div>
+        </div>
+        <div class="nav-menu-item">
+          <div class="nav-menu-img"><img src="img/kling_20260718_IMAGE_show_me_a__869_0.png" alt="GT Cabriolet" /></div>
+          <div class="nav-menu-label"><span>GT Cabriolet</span><span class="nav-menu-view">View</span></div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <img src="img/kling_20260718_IMAGE_Porsche_91_857_1.png" alt="Porsche GT3 RS side profile" />
-    <div class="hero-text">
-      <span class="label">911 GT3 RS</span>
-      <h1>Pure.<br>Uncompromised.<br>Porsche.</h1>
-    </div>
+  <!-- SECTION 1: Hero video -->
+  <section class="panel panel-full" style="height: 90vh;">
+    <video class="hero-video" muted playsinline autoplay loop
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <source src="vid/hero_optimized.mp4" type="video/mp4" />
+    </video>
   </section>
 
-  <section class="section" id="gallery">
-    <h2 class="section-title">Gallery</h2>
-    <div class="grid">
-      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_Porsche_91_857_1.png')">
-        <img src="img/kling_20260718_IMAGE_Porsche_91_857_1.png" alt="GT3 RS Profile" loading="lazy" />
-        <p>GT3 RS — Side Profile</p>
-      </div>
-      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_Porsche_91_857_1 (1).png')">
-        <img src="img/kling_20260718_IMAGE_Porsche_91_857_1 (1).png" alt="GT3 RS Alt" loading="lazy" />
-        <p>GT3 RS — Studio</p>
-      </div>
-      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_can_you_sh_883_0.png')">
-        <img src="img/kling_20260718_IMAGE_can_you_sh_883_0.png" alt="Porsche detail" loading="lazy" />
-        <p>Detail Shot</p>
-      </div>
-      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_can_you_sh_885_0.png')">
-        <img src="img/kling_20260718_IMAGE_can_you_sh_885_0.png" alt="Porsche detail 2" loading="lazy" />
-        <p>Detail Shot II</p>
-      </div>
-      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_i_need_a_s_870_0.png')">
-        <img src="img/kling_20260718_IMAGE_i_need_a_s_870_0.png" alt="Porsche studio" loading="lazy" />
-        <p>Studio Render</p>
-      </div>
-      <div class="card" onclick="openLightbox('img/kling_20260718_IMAGE_show_me_a__869_0.png')">
-        <img src="img/kling_20260718_IMAGE_show_me_a__869_0.png" alt="Porsche showcase" loading="lazy" />
-        <p>Showcase</p>
-      </div>
+  <!-- POWER STAT: row 9, cols 3–5 -->
+  <div class="powerstat-block" aria-label="386 kilowatts slash 525 PS">
+    <div class="powerstat-ticker">
+      <span>386 kW / 525 PS&nbsp;&nbsp;&nbsp;386 kW / 525 PS&nbsp;&nbsp;&nbsp;</span>
+      <span aria-hidden="true">386 kW / 525 PS&nbsp;&nbsp;&nbsp;386 kW / 525 PS&nbsp;&nbsp;&nbsp;</span>
     </div>
+  </div>
+
+  <!-- ENGINE COPY: row 2, col 2 -->
+  <div class="enginecopy-block">
+    A well-rehearsed motorsports team: the 4.0 l six-cylinder flat engine with individual throttle valve intake system in combination with the lightweight stainless steel sport exhaust system.
+  </div>
+
+  <!-- STAT TICKER: row 3, cols 2–3 -->
+  <div class="stat-block" aria-label="3.2 seconds acceleration 0 to 62 mph">
+    <div class="stat-ticker">
+      <span>3.2 SEC&nbsp;&nbsp;&nbsp;ACCELERATION 0–62MPH&nbsp;&nbsp;&nbsp;</span>
+      <span aria-hidden="true">3.2 SEC&nbsp;&nbsp;&nbsp;ACCELERATION 0–62MPH&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER: row 4, col 2 -->
+  <div class="disclaimer-block">
+    Fuel consumption combined* (model range): 20.5 – 20.7 mpg, CO2 emissions combined* (model range): 312 – 310 g/km
+  </div>
+
+  <!-- TOP SPEED TICKER: row 6, cols 4–5 -->
+  <div class="topspeed-block">
+    <div class="topspeed-ticker">
+      <span>184MPH TOP SPEED&nbsp;&nbsp;&nbsp;184MPH TOP SPEED&nbsp;&nbsp;&nbsp;</span>
+      <span aria-hidden="true">184MPH TOP SPEED&nbsp;&nbsp;&nbsp;184MPH TOP SPEED&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- BODY COPY: row 8, col 2 -->
+  <div class="bodycopy-block">
+    The road-approved high-performance 911 GT3 RS sports car shows off its full potential on the race track. With a high-speed naturally aspirated engine, radical downforce and comprehensive lightweight construction.
+  </div>
+
+  <!-- GT3 RS TICKER: row 5, cols 3–5 -->
+  <div class="gt3rs-ticker-wrap" aria-hidden="true">
+    <div class="gt3rs-ticker">
+      <span>GT3 RS&nbsp;&nbsp;&nbsp;GT3 RS&nbsp;&nbsp;&nbsp;GT3 RS&nbsp;&nbsp;&nbsp;GT3 RS&nbsp;&nbsp;&nbsp;</span>
+      <span>GT3 RS&nbsp;&nbsp;&nbsp;GT3 RS&nbsp;&nbsp;&nbsp;GT3 RS&nbsp;&nbsp;&nbsp;GT3 RS&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- SPORTMADE TICKER: row 1, cols 2–3 -->
+  <div class="sportmade-ticker-wrap" aria-hidden="true">
+    <div class="sportmade-ticker">
+      <span>SPORTMADE&nbsp;&nbsp;&nbsp;SPORTMADE&nbsp;&nbsp;&nbsp;SPORTMADE&nbsp;&nbsp;&nbsp;</span>
+      <span>SPORTMADE&nbsp;&nbsp;&nbsp;SPORTMADE&nbsp;&nbsp;&nbsp;SPORTMADE&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- TURBO TICKER: row 2, cols 4–5 -->
+  <div class="turbo-ticker-wrap" aria-hidden="true">
+    <div class="turbo-ticker">
+      <span>TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;</span>
+      <span aria-hidden="true">TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;TURBO&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- SECTION 2: 3/4 front — rows 3–4 = 90vh -->
+  <section class="panel panel-full" style="height: 90vh;">
+    <img src="img/kling_20260718_IMAGE_i_need_a_s_870_0.png" alt="GT3 RS front quarter"
+         style="position: absolute; width: 130%; height: 130%; top: -15%; left: 20%; object-fit: cover; object-position: 80% center;" />
   </section>
 
-  <section class="section" id="video">
-    <h2 class="section-title">In Motion</h2>
-    <div class="video-grid">
-      <div class="video-card">
-        <video controls preload="metadata" poster="img/kling_20260718_IMAGE_Porsche_91_857_1.png">
-          <source src="vid/kling_20260718_VIDEO_I_want_the_926_0.mp4" type="video/mp4" />
-        </video>
-        <p>GT3 RS — Motion I</p>
-      </div>
-      <div class="video-card">
-        <video controls preload="metadata" poster="img/kling_20260718_IMAGE_Porsche_91_857_1.png">
-          <source src="vid/kling_20260718_VIDEO__898_0.mp4" type="video/mp4" />
-        </video>
-        <p>GT3 RS — Motion II</p>
-      </div>
-    </div>
+  <!-- SECTION 3: Rear wing video — cols 1–3 = 60vw, rows 5–6 = 90vh -->
+  <section class="panel" style="width: 60%; height: 90vh;">
+    <video class="section3-video" muted playsinline autoplay loop
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <source src="vid/reversed.mp4" type="video/mp4" />
+    </video>
   </section>
 
+  <!-- SECTION 4: Side detail — cols 3–5 = 60vw right-aligned, rows 7–8 = 90vh -->
+  <section class="panel" style="width: 60%; height: 90vh; margin-left: auto;">
+    <img src="img/kling_20260718_IMAGE_Porsche_91_857_1.png" alt="GT3 RS side detail"
+         style="position: absolute; width: 140%; height: 140%; top: -20%; left: 0; object-fit: cover; object-position: center center;" />
+  </section>
+
+  <!-- SECTION 5: cols 2–4 = 60vw at 20% left, rows 10–11 = 90vh -->
+  <section class="panel" style="width: 60%; height: 90vh; margin-left: 20%;">
+    <video class="section5-video" muted playsinline autoplay loop
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <source src="vid/kling_20260718_VIDEO_I_want_the_926_0 (1).mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <!-- AERODYNAMIC TICKER: row 11, cols 2–4 -->
+  <div class="aero-ticker-wrap" aria-hidden="true">
+    <div class="aero-ticker">
+      <span>AERODYNAMIC&nbsp;&nbsp;&nbsp;AERODYNAMIC&nbsp;&nbsp;&nbsp;AERODYNAMIC&nbsp;&nbsp;&nbsp;</span>
+      <span>AERODYNAMIC&nbsp;&nbsp;&nbsp;AERODYNAMIC&nbsp;&nbsp;&nbsp;AERODYNAMIC&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- AERO COPY: row 12, col 5 -->
+  <div class="aerocopy-block">
+    Porsche Active Aerodynamics (PAA) continuously adjusts the downforce based on all car data. On straights, the Drag Reduction System (DRS) reduces drag.
+  </div>
+
+  <!-- SECTION 6: Studio — rows 15–16 = 90vh, full width -->
+  <section class="panel panel-full" style="height: 90vh;">
+    <img src="img/kling_20260718_IMAGE_i_need_a_s_870_0.png" alt="GT3 RS studio"
+         style="object-position: center 40%;" />
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 — Porsche GT3 RS Gallery</p>
+    <span class="footer-title">PORSCHE GT3 RS</span>
   </footer>
 
-  <!-- Lightbox -->
+  <!-- LIGHTBOX (triggered on panel click) -->
   <div id="lightbox" onclick="closeLightbox()">
-    <button class="close" onclick="closeLightbox()">✕</button>
-    <img id="lightbox-img" src="" alt="" />
+    <button class="lb-close">✕</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
   </div>
 
   <script src="script.js"></script>
