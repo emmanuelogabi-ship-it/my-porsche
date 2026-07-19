@@ -343,6 +343,26 @@ header {
   to   { transform: translateX(-50%); }
 }
 
+/* ── PORSCHE CREST ── */
+.crest-block {
+  position: absolute;
+  top: 540vh;
+  left: 40%;
+  width: 20%;
+  height: 45vh;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.crest-logo {
+  height: 30%;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
 /* ── BODY COPY BLOCK ── */
 .bodycopy-block {
   position: absolute;
